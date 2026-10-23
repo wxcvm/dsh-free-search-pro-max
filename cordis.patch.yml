@@ -1,6 +1,6 @@
-# dsh-free-search — free web search providers (no API key needed)
+# dsh-free-search-pro-max — free web search providers (no API key needed)
 # Registers the plugin into ctx.web + a settings bridge served at
-# /api/dsh-free-search-settings.
+# /api/dsh-free-search-pro-max-settings.
 # The engine is chosen from the sidebar Plugins page -> Free Search row config
 # (plugins.row.config, DSH 0.1.7-rc.1+), from the /free-search-engine command,
 # or directly via this entry's config, e.g.:
@@ -27,7 +27,7 @@
 # the official provider instead of breaking search outright.
 - insert:
     - id: web-search-free
-      name: dsh-free-search
+      name: dsh-free-search-pro-max
       config:
         provider: bing
         disabledEngines: []

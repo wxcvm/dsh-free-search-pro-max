@@ -1,4 +1,14 @@
-# dsh-free-search
+# dsh-free-search-pro-max
+
+> **本仓库是 [`DDDMUC/dsh-free-search`](https://github.com/DDDMUC/dsh-free-search) v0.9.14 的个人分支。**
+> 上游已经有「按失败类型切换引擎 + 额度/鉴权整会话冷却 + 回退提示」，所以这里只补三处缺口：
+>
+> 1. **引擎标注** —— `auto` 模式以前完全不写 Note，结果看不出发力的是谁；现在末尾固定挂 `(engine: bing)`，`showEngineTag: false` 可关
+> 2. **聚合报错** —— 全挂时原来只抛最后一个引擎的错误；现在把每个引擎的失败原因收集起来一次抛出（最多 8 条）
+> 3. **冷却可调** —— 60 秒短冷却变成配置项 `cooldownSeconds`（额度/鉴权仍是整会话冷却）
+>
+> 包名改为 `dsh-free-search-pro-max`，可以和 npm 上的 `dsh-free-search` 共存，不再互相覆盖。
+> 安装：`dsh plugin --profile web add github:wxcvm/dsh-free-search-pro-max`
 
 **DeepSeek Harness 免费搜索插件 —— 无需 API key，零成本，多引擎可切换。** 一个给 DeepSeek Harness (dsh) 添加多引擎搜索 provider 的插件，注册进 `ctx.web` seam。内置 `web_search` 工具自动选用，支持网页设置页切换引擎、配置 API key、一键测试所有引擎、弹出式命令切换引擎。
 
